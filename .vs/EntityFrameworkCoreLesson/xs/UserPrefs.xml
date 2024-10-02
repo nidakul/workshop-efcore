@@ -1,12 +1,12 @@
 ﻿<Properties StartupConfiguration="{8A5CEB48-F145-4214-8876-D2E447E3DDAA}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.CodeFirst FirstBuild="True" />
   <MonoDevelop.Ide.Workbench ActiveDocument="DatabaseFirst/Contexts/NorthwindContext.cs">
     <Files>
-      <File FileName="DatabaseFirst/Program.cs" Line="3" Column="1" />
-      <File FileName="DatabaseFirst/Entities/Brand.cs" Line="14" Column="1" />
+      <File FileName="DatabaseFirst/Program.cs" />
+      <File FileName="DatabaseFirst/Entities/Brand.cs" />
       <File FileName="DatabaseFirst/Contexts/NorthwindContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
@@ -24,7 +24,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
