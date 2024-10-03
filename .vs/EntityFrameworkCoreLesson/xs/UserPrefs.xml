@@ -1,29 +1,22 @@
-﻿<Properties StartupConfiguration="{8A5CEB48-F145-4214-8876-D2E447E3DDAA}|Default">
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+﻿<Properties StartupConfiguration="{29FC8A23-8C12-4FA5-B725-84C2D54D1A10}|Default">
   <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.CodeFirst FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="DatabaseFirst/Contexts/NorthwindContext.cs">
+  <MonoDevelop.Ide.ItemProperties.Lesson9 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CodeFirst/Program.cs">
     <Files>
-      <File FileName="DatabaseFirst/Program.cs" />
-      <File FileName="DatabaseFirst/Entities/Brand.cs" />
-      <File FileName="DatabaseFirst/Contexts/NorthwindContext.cs" Line="1" Column="1" />
+      <File FileName="CodeFirst/Program.cs" Line="25" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EntityFrameworkCoreLesson" expanded="True">
-            <Node name="DatabaseFirst" expanded="True">
-              <Node name="Contexts" expanded="True">
-                <Node name="NorthwindContext.cs" selected="True" />
-              </Node>
-              <Node name="Entities" expanded="True" />
-            </Node>
+          <Node name="EntityFrameworkCoreLesson">
+            <Node name="CodeFirst" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
