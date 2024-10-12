@@ -1,22 +1,23 @@
-﻿<Properties StartupConfiguration="{29FC8A23-8C12-4FA5-B725-84C2D54D1A10}|Default">
-  <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Lesson9 PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="CodeFirst/Program.cs">
+﻿<Properties StartupConfiguration="{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}|Default">
+  <MonoDevelop.Ide.ItemProperties.Lesson9 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Lesson9/Program.cs">
     <Files>
-      <File FileName="CodeFirst/Program.cs" Line="25" Column="2" />
+      <File FileName="Lesson9/Program.cs" Line="22" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EntityFrameworkCoreLesson">
-            <Node name="CodeFirst" expanded="True" />
+          <Node name="EntityFrameworkCoreLesson" expanded="True">
+            <Node name="Lesson9" expanded="True" />
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Update PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
