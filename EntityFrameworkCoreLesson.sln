@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson9", "Lesson9\Lesson9.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data_Update", "Persisting_The_Data_Update\Persisting_The_Data_Update.csproj", "{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data_Delete", "Persisting_The_Data_Delete\Persisting_The_Data_Delete.csproj", "{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

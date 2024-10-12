@@ -1,4 +1,5 @@
-﻿using Persisting_The_Data_Update.Contexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Persisting_The_Data_Update.Contexts;
 using Persisting_The_Data_Update.Entities;
 
 NorthwindContext context = new NorthwindContext();

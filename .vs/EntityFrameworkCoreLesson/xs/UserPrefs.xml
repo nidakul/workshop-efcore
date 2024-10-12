@@ -1,4 +1,4 @@
-﻿<Properties StartupConfiguration="{0AD580A1-5C24-41A2-9DBA-8E36EC00476D}|Default">
+﻿<Properties StartupConfiguration="{C7D57E0A-E6C7-41D6-B136-FDFBCA72C978}|Default">
   <MonoDevelop.Ide.ItemProperties.Lesson9 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Lesson9/Program.cs">
     <Files>
@@ -15,9 +15,10 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Delete PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Update PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Update PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
 </Properties>
