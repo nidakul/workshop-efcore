@@ -30,6 +30,7 @@ NorthwindContext context = new NorthwindContext();
 
 #region Entity State
 //Bir entity instance’ının durumunu ifade eden referanstır. 
-Product product = new Product();
-Console.WriteLine(context.Entry(product).State); //Detached (en sade hali. Bir işleme tabi tutulmamış)
+//Product product = new Product();
+//Console.WriteLine(context.Entry(product).State); //Detached (en sade hali. Bir işleme tabi tutulmamış)
 #endregion
+
