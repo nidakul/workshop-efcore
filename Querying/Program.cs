@@ -22,15 +22,74 @@ NorthwindContext context = new NorthwindContext();
 
 #region Deferred Execution(Ertelenmiş Çalışma)
 //Burada verileri productId = 200'e göre getirir.
-int productId = 5;
-string productName = "rd";
-var products = from product in context.Products
-               where product.ProductId > productId && product.ProductName.Contains(productName)
-               select product;
-productId = 200;
-productName = "st";
-foreach (Product p in products)
-{
-    Console.WriteLine(p.ProductName + " => " + p.ProductId);
-}
+//int productId = 5;
+//string productName = "rd";
+//var products = from product in context.Products
+//               where product.ProductId > productId && product.ProductName.Contains(productName)
+//               select product;
+//productId = 200;
+//productName = "st";
+//foreach (Product p in products)
+//{ 
+//    Console.WriteLine(p.ProductName + " => " + p.ProductId);
+//}
+#endregion
+
+#region Çoğul veri getiren Sorgulama Fonksiyonları
+#region ToListAsync
+#region Method Syntax
+//var products = await context.Products.ToListAsync();
+#endregion
+#region Query Syntax
+//var products = await (from product in context.Products
+//                select product).ToListAsync();
+#endregion
+#endregion
+#region Where
+#region Method Syntax
+//var products = await context.Products.Where(p => p.ProductName.StartsWith("a")).ToListAsync();
+#endregion
+#region Query Syntax
+//var products = await (from product in context.Products
+//                      where product.UnitPrice > 500 && product.ProductName.EndsWith("k")
+//                      select product).ToListAsync();
+#endregion
+#endregion
+#region OrderBy
+#region Method Syntax
+//var products = context.Products.Where(p => p.ProductId > 500 || p.ProductName.EndsWith("r")).OrderBy(p => p.ProductName);
+#endregion
+#region Query Syntax
+//var products = await (from product in context.Products
+//                      where product.ProductId > 500 || product.ProductName.StartsWith("e")
+//                      orderby product.ProductName
+//                      select product).ToListAsync();
+
+#endregion
+#endregion
+#region ThenBy
+//OrderBy üzerinde yapılan sıralama işlemini farklı kolonlarada uygulamamızı sağlayan bir fonksiyondur. 
+#region Method Syntax
+//var products = await context.Products.Where(p => p.ProductId > 500 || p.ProductName.EndsWith("r"))
+//    .OrderBy(p => p.ProductName)
+//    .ThenBy(p => p.UnitPrice)
+//    .ThenBy(p => p.ProductId).ToListAsync();
+#endregion
+#endregion
+#region OrderByDescending
+#region Method Syntax
+//var products = await context.Products.OrderByDescending(p => p.UnitPrice).ToListAsync();
+#endregion
+#region Query Syntax 
+//var products = await (from p in context.Products
+//                      orderby p.ProductName descending
+//                      select p).ToListAsync(); 
+#endregion
+#endregion
+#region ThenByDescending
+#region Method Syntax
+//var products = context.Products.OrderByDescending(p => p.ProductId).ThenByDescending(p => p.UnitPrice)
+//    .ThenBy(p => p.ProductName).ToListAsync();
+#endregion
+#endregion
 #endregion 
