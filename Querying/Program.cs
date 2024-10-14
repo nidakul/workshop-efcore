@@ -102,8 +102,8 @@ NorthwindContext context = new NorthwindContext();
 //Console.WriteLine(product.ProductId + " => " + product.ProductName);
 #endregion
 #region Hiç veri gelmediğinde
-var product = await context.Products.SingleAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
-Console.WriteLine(product.ProductName);
+//var product = await context.Products.SingleAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
+//Console.WriteLine(product.ProductName);
 #endregion
 #region Çok kayıt geldiğinde
 //var product = await context.Products.SingleAsync(p => p.CategoryId == 3);
@@ -111,8 +111,20 @@ Console.WriteLine(product.ProductName);
 //#endregion
 #endregion
 #endregion
-
 #region SingleOrDefaultAsync
 //Yapılan sorgu neticesinde birden fazla veri geliyorsa exception fırlatır, hiç veri gelmiyorsa null döner.
+#region Tek veri geldiğinde
+//var product = await context.Products.SingleOrDefaultAsync(p => p.ProductId == 4);
+//Console.WriteLine(product.ProductId + " => " + product.ProductName);
+#endregion
+#region Hiç veri gelmediğinde
+//var product = await context.Products.SingleOrDefaultAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
+//Console.WriteLine(product);
+#endregion
+#region Çok kayıt geldiğinde
+//var product = await context.Products.SingleOrDefaultAsync(p => p.CategoryId == 3);
+//Console.WriteLine(product.CategoryId);
+//#endregion
+#endregion
 #endregion
 #endregion
