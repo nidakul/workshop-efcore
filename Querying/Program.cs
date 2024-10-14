@@ -173,5 +173,9 @@ NorthwindContext context = new NorthwindContext();
 //Product product = await context.Products.OrderBy(p => p.ProductId).LastAsync(p => p.ProductId < 40);
 //Console.WriteLine(product.ProductId);
 #endregion
+#region LastOrDefaultAsync
+//Product product = await context.Products.OrderBy(p => p.ProductId).LastOrDefaultAsync(p => p.ProductId < 40);
+//Console.WriteLine(product.ProductId);
+#endregion
 #endregion
 
