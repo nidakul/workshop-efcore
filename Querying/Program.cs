@@ -18,7 +18,7 @@ NorthwindContext context = new NorthwindContext();
 //foreach(Product p in products)
 //Console.WriteLine(p.ProductName);
 #endregion
-#endregion
+#endregion 
 
 #region Deferred Execution(Ertelenmiş Çalışma)
 //Burada verileri productId = 200'e göre getirir.
@@ -35,7 +35,7 @@ NorthwindContext context = new NorthwindContext();
 //}
 #endregion
 
-#region Çoğul veri getiren Sorgulama Fonksiyonları
+#region Çoğul veri getiren sorgulama fonksiyonları
 #region ToListAsync
 #region Method Syntax
 //var products = await context.Products.ToListAsync();
@@ -92,4 +92,27 @@ NorthwindContext context = new NorthwindContext();
 //    .ThenBy(p => p.ProductName).ToListAsync();
 #endregion
 #endregion
-#endregion 
+#endregion
+
+#region Tekil veri getiren sorgulama fonksiyonları
+#region SingleAsync
+//Yapılan sorgu neticesinde birden fazla veri geliyorsa ya da hiç gelmiyorsa her iki durumda da exception fırlatır.
+#region Tek veri geldiğinde
+//var product = await context.Products.SingleAsync(p => p.ProductId == 4);
+//Console.WriteLine(product.ProductId + " => " + product.ProductName);
+#endregion
+#region Hiç veri gelmediğinde
+var product = await context.Products.SingleAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
+Console.WriteLine(product.ProductName);
+#endregion
+#region Çok kayıt geldiğinde
+//var product = await context.Products.SingleAsync(p => p.CategoryId == 3);
+//Console.WriteLine(product.CategoryId);
+//#endregion
+#endregion
+#endregion
+
+#region SingleOrDefaultAsync
+//Yapılan sorgu neticesinde birden fazla veri geliyorsa exception fırlatır, hiç veri gelmiyorsa null döner.
+#endregion
+#endregion
