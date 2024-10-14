@@ -127,4 +127,37 @@ NorthwindContext context = new NorthwindContext();
 //#endregion
 #endregion
 #endregion
+#region FirstAsync
+//Yapılan sorgu neticesinde elde edilen verilerden ilkini getirir. Eğer ki hiç veri gelmiyorsa hata fırlatır.
+#region Tek veri geldiğinde
+//var product = await context.Products.FirstAsync(p => p.ProductId == 4);
+//Console.WriteLine(product.ProductId + " => " + product.ProductName);
 #endregion
+#region Hiç veri gelmediğinde
+//var product = await context.Products.FirstAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
+//Console.WriteLine(product);
+#endregion
+#region Çok kayıt geldiğinde
+//var product = await context.Products.FirstAsync(p => p.CategoryId == 3);
+//Console.WriteLine(product.CategoryId);
+//#endregion
+#endregion
+#endregion
+#region FirstOrDefaultAsync
+//Sorgu neticesinde elde edilen verilerden ilkini getirir. Eper ki hiç veri gelmiyorsa null değerini döndürür.
+#region Tek veri geldiğinde
+//var product = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 4);
+//Console.WriteLine(product.ProductId + " => " + product.ProductName);
+#endregion
+#region Hiç veri gelmediğinde
+//var product = await context.Products.FirstOrDefaultAsync(p => p.ProductName.Contains("nfklkdfsmlkmsl"));
+//Console.WriteLine(product);
+#endregion
+#region Çok kayıt geldiğinde
+//var product = await context.Products.FirstOrDefaultAsync(p => p.CategoryId == 3);
+//Console.WriteLine(product.CategoryId);
+//#endregion
+#endregion
+#endregion
+#endregion
+
