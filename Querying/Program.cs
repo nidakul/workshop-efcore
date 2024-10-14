@@ -18,7 +18,7 @@ NorthwindContext context = new NorthwindContext();
 //foreach(Product p in products)
 //Console.WriteLine(p.ProductName);
 #endregion
-#endregion 
+#endregion
 
 #region Deferred Execution(Ertelenmiş Çalışma)
 //Burada verileri productId = 200'e göre getirir.
@@ -158,6 +158,20 @@ NorthwindContext context = new NorthwindContext();
 //Console.WriteLine(product.CategoryId);
 //#endregion
 #endregion
+#endregion
+#region FindAsync
+//Primary key kolonuna özel hızlı bir şekilde sorgulama yapmamızı sağlayan fonksiyondur.
+//Product product = await context.Products.FindAsync(3);
+//Console.WriteLine(product.ProductName + " => " + product.ProductId);
+
+#region Composite Primary Key Durumu
+//Product product = await context.Products.FindAsync(2, 5);
+#endregion
+#endregion
+#region LastAsync
+//Dönen verilerin sonuncusunu alır. OrderBy ile kullanılmalı
+//Product product = await context.Products.OrderBy(p => p.ProductId).LastAsync(p => p.ProductId < 40);
+//Console.WriteLine(product.ProductId);
 #endregion
 #endregion
 
