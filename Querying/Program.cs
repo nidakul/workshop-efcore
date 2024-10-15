@@ -206,7 +206,15 @@ NorthwindContext context = new NorthwindContext();
 //Console.WriteLine(unitPrice);
 #endregion
 #region MinAsync
-decimal? unitPrice = await context.Products.MinAsync(p => p.UnitPrice);
-Console.WriteLine(unitPrice);
+//decimal? unitPrice = await context.Products.MinAsync(p => p.UnitPrice);
+//Console.WriteLine(unitPrice);
+#endregion
+#region Distinct
+//Tekrarlı kayıtları tekilleştirir. ToListAsync ile kullanılır.
+List<Product> products = await context.Products.Distinct().ToListAsync();
+foreach(Product product in products)
+{
+Console.WriteLine(product.ProductName);
+}
 #endregion
 #endregion
