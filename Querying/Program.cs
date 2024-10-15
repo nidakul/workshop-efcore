@@ -196,8 +196,17 @@ NorthwindContext context = new NorthwindContext();
 #endregion
 #region AnyAsync
 //Sorgu neticesinde verinin gelip gelmediğini bool türünde dönen fonksiyondur.
-bool product = await context.Products.AnyAsync(p => p.ProductName == "Bardak");
-bool product2 = await context.Products.AnyAsync();
-Console.WriteLine(product);
+//bool product = await context.Products.AnyAsync(p => p.ProductName == "Bardak");
+//bool product2 = await context.Products.Where(p => p.ProductName.Contains("Bardak")).AnyAsync();
+//bool product3 = await context.Products.AnyAsync();
+//Console.WriteLine(product2);
+#endregion
+#region MaxAsync
+//decimal? unitPrice = await context.Products.MaxAsync(p => p.UnitPrice);
+//Console.WriteLine(unitPrice);
+#endregion
+#region MinAsync
+decimal? unitPrice = await context.Products.MinAsync(p => p.UnitPrice);
+Console.WriteLine(unitPrice);
 #endregion
 #endregion
