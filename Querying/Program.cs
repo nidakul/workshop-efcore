@@ -271,10 +271,67 @@ NorthwindContext context = new NorthwindContext();
 //}
 #endregion
 #region ToArrayAsync
-Product[] product = await context.Products.ToArrayAsync();
-foreach (Product p in product)
+//Product[] product = await context.Products.ToArrayAsync();
+//foreach (Product p in product)
+//{
+//    Console.WriteLine(p.ProductName);
+//}
+#endregion
+#region Select
+//Generate edilecek sorgunun çekilecek kolonlarını ayarlamamızı sağlamaktadır.
+//IQueryable<Product> products =  context.Products.Select(p => new Product
+//{
+//    ProductId = p.ProductId,
+//    UnitPrice = p.UnitPrice
+//});
+//foreach (Product p in products)
+//{
+//    Console.WriteLine($"Id: {p.UnitPrice}, UnitPrice {p.UnitPrice}");
+//}
+
+//Select fonksiyonu gelen verileri farklı türlerde karşılamamızı sağlar. T, anonim
+//var products = context.Products.Select(p => new
+//{
+//    Id = p.ProductId,
+//    UnitPrice = p.UnitPrice
+//});
+//foreach (var p in products)
+//{
+//    Console.WriteLine($"Id: {p.UnitPrice}, UnitPrice {p.UnitPrice}");
+//}
+
+//veya aşağıdaki gibi bir yaklaşım sergileyebiliriz
+//List<ProductDetail> productDetails = await context.Products.Select(p => new ProductDetail
+//{
+//    Id = p.ProductId,
+//    UnitPrice = p.UnitPrice 
+//}).ToListAsync();
+
+//foreach (ProductDetail p in productDetails)
+//{
+//    Console.WriteLine($"Id: {p.UnitPrice}, UnitPrice {p.UnitPrice}");
+//}
+
+//public class ProductDetail
+//{
+//    public int Id { get; set; } 
+//    public decimal? UnitPrice { get; set; }
+//}
+#endregion
+#region SelectMany
+//Select ile aynı amaca hizmet eder. lakin, ilişkisel tablolar neticesinde gelen koleksiyonel verileri de tekilleştirip projeksiyon
+//etmemizi sağlar.
+var productDetails = await context.Products.Include(p => p.OrderDetails).SelectMany(p => p.OrderDetails, (pr, o) => new
 {
-    Console.WriteLine(p.ProductName);
+   pr.ProductId,
+   pr.ProductName,
+   o.Quantity
+}).ToListAsync();
+
+foreach (var p in productDetails)
+{
+    Console.WriteLine($"Id: {p.ProductId}, Name {p.ProductName} Quantity {p.Quantity}");
 }
+
 #endregion
 #endregion
