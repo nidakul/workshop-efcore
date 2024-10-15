@@ -1,23 +1,26 @@
 ﻿<Properties StartupConfiguration="{82EE03DB-7155-40F5-8786-246A4971F543}|Default">
   <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Update PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.ItemProperties.Querying FirstBuild="True" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.Querying PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.DatabaseFirst PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Delete PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Lesson9 PreferredExecutionTarget="MonoDevelop.Default" />
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Persisting_The_Data_Delete/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Querying/Program.cs">
     <Files>
-      <File FileName="Persisting_The_Data_Delete/Program.cs" Line="36" Column="1" />
+      <File FileName="Querying/Program.cs" Line="184" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="EntityFrameworkCoreLesson">
-            <Node name="Persisting_The_Data_Delete" expanded="True" />
-            <Node name="Persisting_The_Data_Update" expanded="True" />
+            <Node name="Querying">
+              <Node name="Entities" expanded="True" />
+            </Node>
           </Node>
         </State>
       </Pad>

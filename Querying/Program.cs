@@ -179,3 +179,25 @@ NorthwindContext context = new NorthwindContext();
 #endregion
 #endregion
 
+#region Diğer Sorgulama Fonksiyonları
+#region CountAsync
+//maliyetli bir süreç aşağıdaki örnek. Çünkü toListAsync deyip liste şeklinde verileri aldık belleğe yükledik.
+//Belleğe yükledikten sonra count'unu aldık. Bu tarz durumlarda IQueryable ile çalışmak daha mantıklı IEnumerable yapmaya gerek yok.
+//int product = (await context.Products.ToListAsync()).Count();
+//Console.WriteLine(product);
+
+//Aşağıdaki kod daha mantıklı maliyet açısından. Veritabanında direkt count'u alıp o şekilde döner bize sonucu.
+//int count = await context.Products.CountAsync();
+//Console.WriteLine(count);
+#endregion
+#region LongCountAsync
+//long count = await context.Products.LongCountAsync(p => p.CategoryId == 4);
+//Console.WriteLine(count);
+#endregion
+#region AnyAsync
+//Sorgu neticesinde verinin gelip gelmediğini bool türünde dönen fonksiyondur.
+bool product = await context.Products.AnyAsync(p => p.ProductName == "Bardak");
+bool product2 = await context.Products.AnyAsync();
+Console.WriteLine(product);
+#endregion
+#endregion
