@@ -211,10 +211,49 @@ NorthwindContext context = new NorthwindContext();
 #endregion
 #region Distinct
 //Tekrarlı kayıtları tekilleştirir. ToListAsync ile kullanılır.
-List<Product> products = await context.Products.Distinct().ToListAsync();
-foreach(Product product in products)
+//List<Product> products = await context.Products.Distinct().ToListAsync();
+//foreach(Product product in products)
+//{
+//Console.WriteLine(product.ProductName);
+//}
+#endregion
+#region AllAsync
+//Bir sorgu neticesinde gelen verilerin, verilen şarta uyup uymadığını kontrol etmektedir. Eğer ki tüm veriler şarta uyuyorsa true,
+//uymuyorsa false dönecektir.
+//bool isBig = await context.Products.AllAsync(p => p.UnitPrice > 100);
+//Console.WriteLine(isBig);
+#endregion
+#region SumAsync
+//decimal? unitPrice = await context.Products.SumAsync(p => p.UnitPrice);
+//Console.WriteLine(unitPrice);
+#endregion
+#region AverageAsync
+//decimal? avg = await context.Products.AverageAsync(a => a.UnitPrice);
+//Console.WriteLine(avg);
+#endregion
+#region ContainsAsync
+//Like '%...% sorgusu oluşturmamızı sağlar.Where ile kullanıyoruz.
+//Where şartı içinde Contains'i görünce efcore bunun like sorgusu olduğunu anlayacaktır
+//List<Product> products = await context.Products.Where(p => p.ProductName.Contains("rd")).ToListAsync();
+//foreach (Product p in products)
+//{
+//Console.WriteLine(p.ProductName);
+//}
+#endregion
+#region StartsWith
+//Like '...%' sorgusu oluşturmamızı sağlar.
+//List<Product> products = await context.Products.Where(p => p.ProductName.StartsWith("a")).ToListAsync();
+//foreach (Product product in products)
+//{
+//    Console.WriteLine(product.ProductName);
+//}
+#endregion
+#region EndsWith
+//Like '%...' sorgusu oluşturmamızı sağlar.
+List<Product> products = await context.Products.Where(p => p.ProductName.EndsWith("e")).ToListAsync();
+foreach (Product product in products)
 {
-Console.WriteLine(product.ProductName);
+    Console.WriteLine(product.ProductName);
 }
 #endregion
 #endregion
