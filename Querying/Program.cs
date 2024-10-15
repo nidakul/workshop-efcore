@@ -250,10 +250,31 @@ NorthwindContext context = new NorthwindContext();
 #endregion
 #region EndsWith
 //Like '%...' sorgusu oluşturmamızı sağlar.
-List<Product> products = await context.Products.Where(p => p.ProductName.EndsWith("e")).ToListAsync();
-foreach (Product product in products)
+//List<Product> products = await context.Products.Where(p => p.ProductName.EndsWith("e")).ToListAsync();
+//foreach (Product product in products)
+//{
+//    Console.WriteLine(product.ProductName);
+//}
+#endregion
+#endregion
+
+#region Sorgu Sonucu Dönüşüm Fonksiyonları
+#region ToDictionaryAsync
+//Sorgu neticesinde gelecek olan veriyi bir dictionary olarak elde etmek/tutmak/karşılamak istiyorsak kullanılır.
+//ToList ile aynı amaca hizmet etmektedir. Yani, oluşturulan sorguyu execute edip neticesini alırla.
+//ToList: Gelen sorgu nticesini entity türünde bir koleksiyona(List<TEntity>) dönüştürmekteyken,
+//ToDictionary: Gelen sorgu neticesini Dictionary türünden bir koleksiyona dönüştürecektir.
+//Dictionary<string,decimal?> products = await context.Products.ToDictionaryAsync(p => p.ProductName, p => p.UnitPrice);
+//foreach(KeyValuePair<string,decimal?> p in products)
+//{
+//Console.WriteLine($"Product name: {p.Key}, UnitPrice: {p.Value}");
+//}
+#endregion
+#region ToArrayAsync
+Product[] product = await context.Products.ToArrayAsync();
+foreach (Product p in product)
 {
-    Console.WriteLine(product.ProductName);
+    Console.WriteLine(p.ProductName);
 }
 #endregion
 #endregion
