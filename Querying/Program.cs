@@ -338,15 +338,25 @@ NorthwindContext context = new NorthwindContext();
 
 #region Group By
 #region Method Syntax
-var datas = await context.Products.GroupBy(p => p.UnitPrice).Select(group => new
-{
-    Count = group.Count(),
-    UnitPrice = group.Key
-}).ToListAsync(); //UnitPrice'a göre gruplama işlemi gerçekleştir
+//var datas = await context.Products.GroupBy(p => p.UnitPrice).Select(group => new
+//{
+//    Count = group.Count(),
+//    UnitPrice = group.Key
+//}).ToListAsync(); //UnitPrice'a göre gruplama işlemi gerçekleştir
 
-foreach (var data in datas)
-{
-    Console.WriteLine($"Count:{data.Count}, UnitPrice:{data.UnitPrice}");
-}
+//foreach (var data in datas)
+//{
+//    Console.WriteLine($"Count:{data.Count}, UnitPrice:{data.UnitPrice}");
+//}
+#endregion
+#region Query Syntax
+var datas = await (from product in context.Products
+                   group product by product.UnitPrice
+                   into g
+             select new
+             {
+                 UnitPrice = g.Key,
+                 Count = g.Count()
+             }).ToListAsync();
 #endregion
 #endregion
