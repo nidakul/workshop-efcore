@@ -350,13 +350,32 @@ NorthwindContext context = new NorthwindContext();
 //}
 #endregion
 #region Query Syntax
+//var datas = await (from product in context.Products
+//                   group product by product.UnitPrice
+//                   into g
+//             select new
+//             {
+//                 UnitPrice = g.Key,
+//                 Count = g.Count()
+//             }).ToListAsync();
+#endregion
+#endregion
+
+#region Foreach
+//Sorgulama fonksiyonu değildir!
+//Sorgulama neticesinde elde edilen koleksiyonal veriler üzerinde iterasyonel olarak dönmemizi ve teker teker veriler elde edip
+//işlemler yapabilmemizi sağlayan bir fonksiyondur. Foreach döngüsünün metot halidir.
 var datas = await (from product in context.Products
                    group product by product.UnitPrice
                    into g
-             select new
-             {
-                 UnitPrice = g.Key,
-                 Count = g.Count()
-             }).ToListAsync();
-#endregion
+                   select new
+                   {
+                       UnitPrice = g.Key,
+                       Count = g.Count()
+                   }).ToListAsync();
+
+datas.ForEach(x =>
+{
+
+});
 #endregion
