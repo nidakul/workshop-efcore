@@ -321,17 +321,32 @@ NorthwindContext context = new NorthwindContext();
 #region SelectMany
 //Select ile aynı amaca hizmet eder. lakin, ilişkisel tablolar neticesinde gelen koleksiyonel verileri de tekilleştirip projeksiyon
 //etmemizi sağlar.
-var productDetails = await context.Products.Include(p => p.OrderDetails).SelectMany(p => p.OrderDetails, (pr, o) => new
-{
-   pr.ProductId,
-   pr.ProductName,
-   o.Quantity
-}).ToListAsync();
+//var productDetails = await context.Products.Include(p => p.OrderDetails).SelectMany(p => p.OrderDetails, (pr, o) => new
+//{
+//   pr.ProductId,
+//   pr.ProductName,
+//   o.Quantity
+//}).ToListAsync();
 
-foreach (var p in productDetails)
+//foreach (var p in productDetails)
+//{
+//    Console.WriteLine($"Id: {p.ProductId}, Name {p.ProductName} Quantity {p.Quantity}");
+//}
+
+#endregion
+#endregion
+
+#region Group By
+#region Method Syntax
+var datas = await context.Products.GroupBy(p => p.UnitPrice).Select(group => new
 {
-    Console.WriteLine($"Id: {p.ProductId}, Name {p.ProductName} Quantity {p.Quantity}");
+    Count = group.Count(),
+    UnitPrice = group.Key
+}).ToListAsync(); //UnitPrice'a göre gruplama işlemi gerçekleştir
+
+foreach (var data in datas)
+{
+    Console.WriteLine($"Count:{data.Count}, UnitPrice:{data.UnitPrice}");
 }
-
 #endregion
 #endregion

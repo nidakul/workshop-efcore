@@ -12,13 +12,13 @@
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workbench ActiveDocument="Querying/Program.cs">
     <Files>
-      <File FileName="Querying/Program.cs" Line="184" Column="1" />
+      <File FileName="Querying/Program.cs" Line="331" Column="34" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="EntityFrameworkCoreLesson">
-            <Node name="Querying">
+          <Node name="EntityFrameworkCoreLesson" expanded="True">
+            <Node name="Querying" expanded="True">
               <Node name="Entities" expanded="True" />
             </Node>
           </Node>
