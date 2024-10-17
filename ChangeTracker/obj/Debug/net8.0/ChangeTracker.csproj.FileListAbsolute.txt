@@ -1,0 +1,15 @@
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/bin/Debug/net8.0/ChangeTracker
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/bin/Debug/net8.0/ChangeTracker.deps.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/bin/Debug/net8.0/ChangeTracker.runtimeconfig.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/bin/Debug/net8.0/ChangeTracker.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/bin/Debug/net8.0/ChangeTracker.pdb
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.AssemblyInfoInputs.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.AssemblyInfo.cs
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.csproj.CoreCompileInputs.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.sourcelink.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/refint/ChangeTracker.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.pdb
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ChangeTracker.genruntimeconfig.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/ChangeTracker/obj/Debug/net8.0/ref/ChangeTracker.dll
