@@ -61,4 +61,22 @@ NorthwindContext context = new NorthwindContext();
 //    else if (e.State == EntityState.Deleted) { }
 //    else { }
 //});
-#endregion 
+#endregion
+
+#region AcceptAllChanges Metodu
+//SaveChanges() veya SaveChanges(true) tetiklendiğinde EfCore her şeyin yolunda olduğunu varsayarak track ettiği verilerin takibini keser yeni değişikliklerin takip edilmesini bekler. Böyle bir durumda beklenmeyen bir durum/olası bir hata söz konusu olursa eğer EfCore takip ettiği nesneleri bırakacağı için bir düzeltme mevzu bahis olamayacaktır.
+//SaveChanges(False), EfCore'a gerekli veritabanı komutlarını yürütmesini sağlar ancak gerektiğinde yeniden oynatılabilmesi için değişiklikleri beklemeye/nesneleri takip etmeye devam eder.Ta ki AcceptAllChanges metodunu irademizle çağırana kadar.
+//SaveChanges(false) ile işlemin başarılı olduğundan emin olursanız AcceptAllChanges metodu ile nesnelerden takibi kesebiliriz.
+var products = await context.Products.ToListAsync();
+products.FirstOrDefault(p => p.ProductId == 6).UnitPrice = 123;
+context.Products.Remove(products.FirstOrDefault(p => p.ProductId == 7));
+products.FirstOrDefault(p => p.ProductId == 6).ProductName = "Halı";
+
+await context.SaveChangesAsync();
+await context.SaveChangesAsync(true);
+await context.SaveChangesAsync(false); //Burada takip edilen veriler bırakılmıyor başarılı olsa da başarısız olsada
+                                       //AcceptAllChanges ise takip edilen verilerin bırakılmasını sağlar.
+                                       //trueda zaten default olarak AcceptAllChanges kullanılıyor.
+context.ChangeTracker.AcceptAllChanges();
+#endregion
+
