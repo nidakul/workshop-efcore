@@ -44,3 +44,21 @@ NorthwindContext context = new NorthwindContext();
 //SaveChanges fonksiyonu tetiklendiğinde DetectChanges metodunu içerisinde default olarak çağırmaktadır. Bu durumda DetectChanges fonksiyonunun
 //kullanımını irademizle yönetmek ve maliyet/performans optimizasyonu yapmak istediğimiz durumlarda AutoDetectChangesEnabled özelliğini kapatabiliriz.
 #endregion
+
+#region Entries Metodu
+//Context'te ki Entry metodunun koleksiyonel versiyonudur.
+//ChangeTracker mekanizması tarafından izlenen her entity nesnesinin bilgisini EntityEntry türünden elde etmemizi sağlar ve belirli işlemler yapabilmemize olanak tanır.
+//Entries metodu, DetectChanges metodunu tetikler. Bu durumda tıpkı SaveChanges'da olduğu gibi bir maliyettir. Buradaki maliyetten kaçınmak için AutoDetectChangesEnabled özelliğine false değeri verilebilir.
+
+//var products = await context.Products.ToListAsync();
+//products.FirstOrDefault(p => p.ProductId == 6).UnitPrice = 123;
+//context.Products.Remove(products.FirstOrDefault(p => p.ProductId == 7));
+//products.FirstOrDefault(p => p.ProductId == 6).ProductName = "Halı";
+
+//context.ChangeTracker.Entries().ToList().ForEach(e =>
+//{
+//    if (e.State == EntityState.Unchanged) { }
+//    else if (e.State == EntityState.Deleted) { }
+//    else { }
+//});
+#endregion 
