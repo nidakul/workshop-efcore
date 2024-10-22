@@ -31,10 +31,16 @@ NorthwindContext context = new NorthwindContext();
 //isteyebiliriz. İşte bunun için DetectChanges fonksiyonu kullanılabilir ve her ne kadar Ef Core değişiklikleri otomatik algılıyor olsa da siz
 //yine de iradenizle kontrole zorlayabilirsiniz.
 
-var products = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 3);
-products.UnitPrice = 345;
+//var products = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 3);
+//products.UnitPrice = 345;
 
-context.ChangeTracker.DetectChanges();
-await context.SaveChangesAsync();
+//context.ChangeTracker.DetectChanges();
+//await context.SaveChangesAsync();
+#endregion
 
+#region AutoDetectChangesEnabled Property'si
+//İlgili metotlar(SaveChanges, Entries) tarafından DetectChanges metodunun otomatik olarak tetiklenmesinin konfigürasyonunu yapmamızı
+//sağlayan property'dir.
+//SaveChanges fonksiyonu tetiklendiğinde DetectChanges metodunu içerisinde default olarak çağırmaktadır. Bu durumda DetectChanges fonksiyonunun
+//kullanımını irademizle yönetmek ve maliyet/performans optimizasyonu yapmak istediğimiz durumlarda AutoDetectChangesEnabled özelliğini kapatabiliriz.
 #endregion
