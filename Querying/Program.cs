@@ -376,6 +376,6 @@ var datas = await (from product in context.Products
 
 datas.ForEach(x =>
 {
-
+    
 });
 #endregion
