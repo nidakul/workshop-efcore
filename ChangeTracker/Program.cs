@@ -124,3 +124,25 @@ NorthwindContext context = new NorthwindContext();
 //context.SaveChangesAsync();
 #endregion
 #endregion
+
+#region Context nesnesi üzerinden change tracker
+//var product = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 5);
+//product.ProductName = "New Name";
+//product.UnitPrice = 123;
+
+#region OriginalValues Property'si
+//var unitPrice = context.Entry(product).OriginalValues.GetValue<decimal?>(nameof(Product.UnitPrice));
+//var productName = context.Entry(product).OriginalValues.GetValue<string>(nameof(Product.ProductName));
+//Console.WriteLine(unitPrice + " " + productName);
+#endregion
+#region CurrentValues Property'si
+//var productName = context.Entry(product).CurrentValues.GetValue<string>(nameof(Product.ProductName));
+//Console.WriteLine(productName);
+#endregion
+#region GetDatabaseValues Metodu
+//var products = await context.Entry(product).GetDatabaseValuesAsync();
+//var entityType = products.EntityType;
+//Console.WriteLine(entityType);
+#endregion
+#endregion
+
