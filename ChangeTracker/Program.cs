@@ -1,4 +1,5 @@
 ﻿using ChangeTracker.Contexts;
+using ChangeTracker.Entities;
 using Microsoft.EntityFrameworkCore;
 
 NorthwindContext context = new NorthwindContext();
@@ -67,16 +68,59 @@ NorthwindContext context = new NorthwindContext();
 //SaveChanges() veya SaveChanges(true) tetiklendiğinde EfCore her şeyin yolunda olduğunu varsayarak track ettiği verilerin takibini keser yeni değişikliklerin takip edilmesini bekler. Böyle bir durumda beklenmeyen bir durum/olası bir hata söz konusu olursa eğer EfCore takip ettiği nesneleri bırakacağı için bir düzeltme mevzu bahis olamayacaktır.
 //SaveChanges(False), EfCore'a gerekli veritabanı komutlarını yürütmesini sağlar ancak gerektiğinde yeniden oynatılabilmesi için değişiklikleri beklemeye/nesneleri takip etmeye devam eder.Ta ki AcceptAllChanges metodunu irademizle çağırana kadar.
 //SaveChanges(false) ile işlemin başarılı olduğundan emin olursanız AcceptAllChanges metodu ile nesnelerden takibi kesebiliriz.
-var products = await context.Products.ToListAsync();
-products.FirstOrDefault(p => p.ProductId == 6).UnitPrice = 123;
-context.Products.Remove(products.FirstOrDefault(p => p.ProductId == 7));
-products.FirstOrDefault(p => p.ProductId == 6).ProductName = "Halı";
+//var products = await context.Products.ToListAsync();
+//products.FirstOrDefault(p => p.ProductId == 6).UnitPrice = 123;
+//context.Products.Remove(products.FirstOrDefault(p => p.ProductId == 7));
+//products.FirstOrDefault(p => p.ProductId == 6).ProductName = "Halı";
 
-await context.SaveChangesAsync();
-await context.SaveChangesAsync(true);
-await context.SaveChangesAsync(false); //Burada takip edilen veriler bırakılmıyor başarılı olsa da başarısız olsada
-                                       //AcceptAllChanges ise takip edilen verilerin bırakılmasını sağlar.
-                                       //trueda zaten default olarak AcceptAllChanges kullanılıyor.
-context.ChangeTracker.AcceptAllChanges();
+//await context.SaveChangesAsync();
+//await context.SaveChangesAsync(true);
+//await context.SaveChangesAsync(false); //Burada takip edilen veriler bırakılmıyor başarılı olsa da başarısız olsada
+//                                       //AcceptAllChanges ise takip edilen verilerin bırakılmasını sağlar.
+//                                       //trueda zaten default olarak AcceptAllChanges kullanılıyor.
+//context.ChangeTracker.AcceptAllChanges();
 #endregion
 
+#region HasChanges Metodu
+//Takip edilen nesneler arasından değişiklik yapılanların olup olmadığının bilgisini verir.
+//Arkaplanda DetectChanges metodunu tetikler.
+//context.ChangeTracker.HasChanges(); //bool
+#endregion
+
+#region Entity States
+//Entity nesnelerinin durumlarını ifade eder.
+#region Detached
+//Nesnenin changeTracker mekanizması tarafından takip edilmediğini ifade eder.
+//Product product = new(); //context'ten gelmediği için takip edilmez.
+//Console.WriteLine(context.Entry(product).State);
+#endregion
+#region Added
+//Veritabanına eklenecek nesneyi ifade ede. Added henüz veritabanına işlenmeyen veriyi ifade eder.SaveChanges fonksiyonu çağrıldığında insert sorgusu oluşturulacağı anlamına gelir.
+//Product product = new() { UnitPrice = 234, ProductName="Yeni Ürün"}; 
+//Console.WriteLine(context.Entry(product).State);
+//await context.Products.AddAsync(product);
+//Console.WriteLine(context.Entry(product).State);
+//await context.SaveChangesAsync();
+#endregion
+#region Unchanged
+//Veritabanından sorgulandığından beri nesne üzerinde herhangi bir değişiklik yapılmadığını ifade eder. Sorgu neticesinde elde edilen tüm nesneler başlangıçta bu state değerindedir.
+//var products = await context.Products.ToListAsync();
+//var data = context.ChangeTracker.Entries();
+#endregion
+#region Modified
+//Nesne üzerinde değişiklik/güncelleme yapıldığını ifade eder. SaveChanges fonksiyonu çağrıldığında update sorgusu oluşturulacağı anlamına gelir.
+//var product = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 5);
+//product.ProductName = "New Name";
+//Console.WriteLine(context.Entry(product).State); //Modified
+//await context.SaveChangesAsync();
+//Console.WriteLine(context.Entry(product).State); //Unchanged
+//Eğer SaveChanges'ı false parametreli çağırmış olsaydık iki durumda da modified yazacaktı takip etmeyi bırakmadığı için.
+#endregion
+#region Deleted
+//Nesnenin silindiğini ifade eder. SaveChanges fonksiyonu çağrıldığında delete sorgusu oluşturulacağı anlamına gelir.
+//var product = await context.Products.FirstOrDefaultAsync(p => p.ProductId == 5);
+//context.Products.Remove(product);
+//Console.WriteLine(context.Entry(product).State);
+//context.SaveChangesAsync();
+#endregion
+#endregion
