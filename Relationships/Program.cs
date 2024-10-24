@@ -24,3 +24,15 @@ Console.WriteLine();
 //Navigation property'ler entitylerdeki tanımlarına göre n'e n yahut 1'e n şeklinde ilişki türlerini ifade etmektedirler.
 #endregion
 #endregion
+
+#region İlişki Türleri
+#region One to One
+//Çalışan ile adresi arasındaki ilişki, karı koca arasındaki ilişki
+#endregion
+#region One to Many
+//Çalışan ile departman arasındaki ilişki, anne ve çocukları arasındaki ilişki.
+#endregion
+#region Many to Many
+//Çalışanlar ile projeler arasındaki ilişki, kardeşler arasındaki ilişki.
+#endregion
+#endregion
