@@ -1,21 +1,20 @@
 ﻿<Properties StartupConfiguration="{2B6C201E-D476-417D-8746-467103F5BCCB}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.ItemProperties.Persisting__The__Data__Update PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="ChangeTracker/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Relationships/Program.cs">
     <Files>
-      <File FileName="ChangeTracker/Program.cs" Line="7" Column="1" />
+      <File FileName="Relationships/Program.cs" Line="38" Column="11" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="EntityFrameworkCoreLesson" expanded="True">
-            <Node name="ChangeTracker">
-              <Node name="Program.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
+        <State name="__root__" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>

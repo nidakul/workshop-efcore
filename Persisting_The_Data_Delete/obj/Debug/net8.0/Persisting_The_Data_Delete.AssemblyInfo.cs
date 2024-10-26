@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Persisting_The_Data_Delete")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+06f862bc2070f4ba551eceecf34bf0f78e714c49")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1a5ce3cbed0919168ba2a69e8bf500825d794fa2")]
 [assembly: System.Reflection.AssemblyProductAttribute("Persisting_The_Data_Delete")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Persisting_The_Data_Delete")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

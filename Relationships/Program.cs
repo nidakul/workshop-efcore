@@ -36,3 +36,28 @@ Console.WriteLine();
 //Çalışanlar ile projeler arasındaki ilişki, kardeşler arasındaki ilişki.
 #endregion
 #endregion
+
+#region Entity Framework Core’da İlişki Yapılandırma Yöntemleri
+#region Default Conventions
+//Varsayılan entity kurallarını kullanarak yapılan ilişki yapılandırma yöntemleridir.
+//Navigation property’leri kullanarak ilişki şablonlarını çıkarmaktadır.
+#endregion
+#region Data Annotations Attributes
+//Entity’nin niteliklerine göre ince ayarlar yapmamızı sağlayan attribute’lardır. [Key], [ForeignKey]
+#endregion
+#region Fluent API
+//Entity modellerindeki ilişkileri yapılandırırken daha detaylı çalışmamızı sağlayan yöntemdir.
+#region HasOne
+//İlgili entity'nin ilişkisel entity'e birebir ya da bire çok olacak şekilde ilişkisini yapılandırmaya başlayan metottur.
+#endregion
+#region HasMany
+//İlgili entity'nin ilişkisel entity'e çoka bir ya da çoka çok olacak şekilde ilişkisini yapılandırmaya başlayan metottur.
+#endregion
+#region WithOne
+//HasOne ya da HasMany'den sonra bire bir ya da çoka bir olcak şekilde ilişki yapılandırmasını tamamlayan metottur.
+#endregion
+#region WithMany
+//HasOne ya da HasMany'den sonra bire çok ya da çoka çok olacak şekilde ilişki yapılandırmasını tamamlayan metottur.
+#endregion
+#endregion
+#endregion
