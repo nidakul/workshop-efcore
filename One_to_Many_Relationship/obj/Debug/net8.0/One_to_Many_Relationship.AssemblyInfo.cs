@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("One_to_Many_Relationship")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+854b3d3c1eb446c53420cdaaf3610bac8a5e486f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af229e6628a2196ffc858969c495c09fa89381c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("One_to_Many_Relationship")]
 [assembly: System.Reflection.AssemblyTitleAttribute("One_to_Many_Relationship")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
