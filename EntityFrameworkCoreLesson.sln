@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One_to_One_Relationship", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "One_to_Many_Relationship", "One_to_Many_Relationship\One_to_Many_Relationship.csproj", "{86A66EA7-4096-45CA-B348-6320D0C3971C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Many_to_Many_Relationship", "Many_to_Many_Relationship\Many_to_Many_Relationship.csproj", "{18735584-F083-481E-A9B0-F517EEB60350}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{86A66EA7-4096-45CA-B348-6320D0C3971C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86A66EA7-4096-45CA-B348-6320D0C3971C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86A66EA7-4096-45CA-B348-6320D0C3971C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18735584-F083-481E-A9B0-F517EEB60350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18735584-F083-481E-A9B0-F517EEB60350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18735584-F083-481E-A9B0-F517EEB60350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18735584-F083-481E-A9B0-F517EEB60350}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
