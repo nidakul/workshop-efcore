@@ -1,0 +1,15 @@
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/bin/Debug/net8.0/Relationships
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/bin/Debug/net8.0/Relationships.deps.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/bin/Debug/net8.0/Relationships.runtimeconfig.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/bin/Debug/net8.0/Relationships.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/bin/Debug/net8.0/Relationships.pdb
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.AssemblyInfoInputs.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.AssemblyInfo.cs
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.csproj.CoreCompileInputs.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.sourcelink.json
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/refint/Relationships.dll
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.pdb
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/Relationships.genruntimeconfig.cache
+/Users/nida/Projects/EntityFrameworkCoreLesson/Relationships/obj/Debug/net8.0/ref/Relationships.dll
