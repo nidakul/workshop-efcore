@@ -69,12 +69,32 @@ Console.WriteLine();
 #region One to Many İlişkisel Senaryolarda Veri Ekleme
 BlogDbContext context = new();
 #region 1. Yöntem -> Principal Entity Üzerinden Dependent Entity Verisi Ekleme
+#region Nesne Referansı Üzerinden Ekleme
+//Burada Blog üzerinden Post'a ulaştığımız için post'un boş olmaması lazım hata almamak için. Bunun içinde Blog classının const'unda new'leme yaptık.
+//Blog blog = new() { Name = "Nida Blog" };
+//blog.Posts.Add(new() { Title = "Post 1" });
+//blog.Posts.Add(new() { Title = "Post 2" });
+//blog.Posts.Add(new() { Title = "Post 3" });
+
+//await context.AddAsync(blog);
+//await context.SaveChangesAsync();
 #endregion
+#region Object Initializer Üzerinden Ekleme
+Blog blog2 = new()
+{
+    Name = "A Blog",
+    Posts = new HashSet<Post>() { new() { Title = "Post 4" }, new() { Title = "Post 5" } }
+};
+await context.AddAsync(blog2);
+await context.SaveChangesAsync();
+#endregion 
+#endregion
+
 class Blog
 {
     public Blog()
     {
-        Posts = new HashSet<Post>();
+        Posts = new HashSet<Post>(); //HashSet yerine List ile de kullanıldığını görebiliriz
     }
     public int Id { get; set; }
     public string Name { get; set; }
