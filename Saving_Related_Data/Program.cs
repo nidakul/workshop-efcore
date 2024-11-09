@@ -80,16 +80,24 @@ BlogDbContext context = new();
 //await context.SaveChangesAsync();
 #endregion
 #region Object Initializer Üzerinden Ekleme
-Blog blog2 = new()
-{
-    Name = "A Blog",
-    Posts = new HashSet<Post>() { new() { Title = "Post 4" }, new() { Title = "Post 5" } }
-};
-await context.AddAsync(blog2);
-await context.SaveChangesAsync();
+//Blog blog2 = new()
+//{
+//    Name = "A Blog",
+//    Posts = new HashSet<Post>() { new() { Title = "Post 4" }, new() { Title = "Post 5" } }
+//};
+//await context.AddAsync(blog2);
+//await context.SaveChangesAsync();
 #endregion 
 #endregion
-
+#region 2. Yöntem -> Dependent Entity Üzerinden Principal Entity Verisi Ekleme
+Post post = new Post()
+{
+    Title = "Post 6",
+    Blog = new() { Name = "B Blog"}
+};
+await context.AddAsync(post);
+await context.SaveChangesAsync();
+#endregion 
 class Blog
 {
     public Blog()
